@@ -30,7 +30,7 @@ Such logs are needed to replicate collaborative editing sessions using different
         "length": 6,
         "context": {},
         "collaborators": [0, 1],
-        "directlyConnectedTo": [0, 1]
+        "neighbours": [0, 1]
     },
     {
         "event": "localInsertion",
@@ -42,7 +42,7 @@ Such logs are needed to replicate collaborative editing sessions using different
         "length": 6,
         "context": {},
         "collaborators": [0, 1, 2],
-        "directlyConnectedTo": [0, 1, 2]
+        "neighbours": [0, 1, 2]
     },
     ...
     {
@@ -53,7 +53,7 @@ Such logs are needed to replicate collaborative editing sessions using different
         "operation": { ... },
         "context": {},
         "collaborators": [0, 1, 2],
-        "directlyConnectedTo": [0, 1, 2]
+        "neighbours": [0, 1, 2]
     },
     {
         "event": "remoteInsertion",
@@ -65,7 +65,7 @@ Such logs are needed to replicate collaborative editing sessions using different
             "1": 0
         },
         "collaborators": [0, 1, 2],
-        "directlyConnectedTo": [0, 1, 2]
+        "neighbours": [0, 1, 2]
     },
     {
         "event": "localDeletion",
@@ -80,7 +80,7 @@ Such logs are needed to replicate collaborative editing sessions using different
             "1": 0
         },
         "collaborators": [0, 1, 2],
-        "directlyConnectedTo": [0, 1, 2]
+        "neighbours": [0, 1, 2]
     },
     {
         "event": "disconnection",
@@ -130,7 +130,7 @@ We now describe the fields specific to each kind of event.
 
 - context: The context of generation or reception of the operation. It represents the state of the document using a _state vector_, which keeps track of the operations observed by the site.
 - collaborators: The global list of current collaborators.
-- directlyConnectedTo: The list of collaborators to which the site is directly connected to at the time. May differ from the field _collaborators_ because of network characteristics.
+- neighbours: The list of collaborators to which the site is directly connected to at the time. May differ from the field _collaborators_ because of network characteristics.
 
 ## Open questions
 
