@@ -12,7 +12,7 @@ Such logs are needed to replicate collaborative editing sessions using different
         "event": "creation",
         "timestamp": 152353168720,
         "siteId": 0,
-        "documentTitle": "log-mockup",
+        "documentId": "log-mockup",
     },
     {
         "event": "connection",
@@ -112,7 +112,7 @@ We now describe the fields specific to each kind of event.
 
 ### creation
 
-- documentTitle: The title of the document.
+- documentId: The identifier of the document.
 
 ###  localDeletion and localInsertion
 
