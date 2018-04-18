@@ -9,19 +9,19 @@ Such logs are needed to replicate collaborative editing sessions using different
 ```JSON
 [
     {
-        "event": "creation",
+        "type": "creation",
         "timestamp": 152353168720,
         "siteId": 0,
         "documentId": "log-mockup",
     },
     {
-        "event": "connection",
+        "type": "connection",
         "timestamp": 152353168720,
         "siteId": 0,
     },
     ...
     {
-        "event": "localInsertion",
+        "type": "localInsertion",
         "timestamp": 1523531787342,
         "siteId": 0,
         "clock": 0,
@@ -33,7 +33,7 @@ Such logs are needed to replicate collaborative editing sessions using different
         "neighbours": [0, 1]
     },
     {
-        "event": "localInsertion",
+        "type": "localInsertion",
         "timestamp": 1523531787343,
         "siteId": 1,
         "clock": 0,
@@ -46,7 +46,7 @@ Such logs are needed to replicate collaborative editing sessions using different
     },
     ...
     {
-        "event": "remoteInsertion",
+        "type": "remoteInsertion",
         "timestamp": 1523531960000,
         "siteId": 2,
         "sender": 1,
@@ -56,7 +56,7 @@ Such logs are needed to replicate collaborative editing sessions using different
         "neighbours": [0, 1, 2]
     },
     {
-        "event": "remoteInsertion",
+        "type": "remoteInsertion",
         "timestamp": 1523531960300,
         "siteId": 2,
         "sender": 1,
@@ -68,7 +68,7 @@ Such logs are needed to replicate collaborative editing sessions using different
         "neighbours": [0, 1, 2]
     },
     {
-        "event": "localDeletion",
+        "type": "localDeletion",
         "timestamp": 1523531960875,
         "siteId": 2,
         "clock": 0,
@@ -83,7 +83,7 @@ Such logs are needed to replicate collaborative editing sessions using different
         "neighbours": [0, 1, 2]
     },
     {
-        "event": "disconnection",
+        "type": "disconnection",
         "timestamp": 1524032256605,
         "siteId": 2
     },
@@ -97,7 +97,7 @@ Such logs are needed to replicate collaborative editing sessions using different
 
 The following fields are shared by all log entries.
 
-- event: The type of event. According to its value, the schema of the entry will change. Several values are accepted :
+- type: The type of event. According to its value, the schema of the entry will change. Several values are accepted :
     - _creation_: The creation of the document.
     - _connection_: A site joining the collaborative session.
     - _disconnection_: A site leaving the collaborative session.
